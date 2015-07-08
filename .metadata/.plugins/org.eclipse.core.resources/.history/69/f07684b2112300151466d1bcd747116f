@@ -1,0 +1,12 @@
+<?php
+
+//Setup File
+#Database connection here
+
+$dbc = mysqli_connect('localhost','dev','ta266266','atomcms');
+
+
+$site_title = 'Atome CMS 2.0';
+$page_title = 'Home Page';
+
+?>

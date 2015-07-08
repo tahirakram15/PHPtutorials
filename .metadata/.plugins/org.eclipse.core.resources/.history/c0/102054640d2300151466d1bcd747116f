@@ -1,0 +1,7 @@
+<?php
+
+//Setup File
+$site_title = 'Atome CMS 2.0';
+$page_title = 'Home Page';
+
+?>

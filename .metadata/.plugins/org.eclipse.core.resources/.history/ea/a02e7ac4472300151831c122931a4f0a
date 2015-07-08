@@ -1,0 +1,60 @@
+
+<?php
+ include 'config/setup.php';
+ $query = "SELECT * FROM pages WHERE id=1";
+ $result = mysqli_query($dbc, $query);
+ 
+ $page = mysqli_fetch_assoc($result);
+ 
+ 
+ ?>
+
+<!DOCTYPE >
+<html>
+	<head>
+		
+		<title><?php echo $page['title'].' |'. $site_title?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<?php include 'config/css.php';?>
+		<?php include 'config/js.php';?>	
+			
+		
+	</head>
+	
+		
+	
+	<body>
+	
+	
+	<div id="wrap">	
+		<nav class="navbar navbar-default" role= "navigation">
+		
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href = "#">Home</a></li>
+					<li><a href = "#">About Us</a></li>
+					<li><a href = "#">Faq</a></li>
+					<li><a href = "#">Contact US</a></li>
+				</ul>
+			</div>		
+		
+		</nav>
+		
+		
+		<div class="container">
+			<h1><?php echo $page['header']; ?></h1>
+			<p> <?php echo $page['body']; ?></p>
+		</div>
+	</div>	
+		<footer class ="footer">
+			<div class="container">
+				<p>This is my footer</p>
+			</div>
+			
+		</footer>
+	
+	</body>
+	
+	
+</html>

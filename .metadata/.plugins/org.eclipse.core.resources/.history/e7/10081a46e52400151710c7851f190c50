@@ -1,0 +1,20 @@
+<?php
+
+//Setup File
+#Database connection here
+
+//$mysqli = new mysqli("localhost", "dev1", "ta266266", "atomcms1", 3306);
+$dbc = mysqli_connect('localhost','tahir','ta266266','atomcms',3306) OR die('could not connect because '.mysqli_connect_error());
+
+$site_title = 'Atome CMS 2.0';
+if(isset($_GET['page'])){
+	$pageid =$_GET['page'];
+}
+
+#page setup
+$query = "SELECT * FROM pages WHERE id=$pageid";
+ $result = mysqli_query($dbc, $query);
+ 
+ $page = mysqli_fetch_assoc($result);
+
+?>
